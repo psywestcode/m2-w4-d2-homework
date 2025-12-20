@@ -1,61 +1,67 @@
-/* General Font Styles */
+/* General Layout & Fonts */
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: rgb(238, 226, 192); 
+    background-color: rgb(238, 226, 192); /* Matches original background tone */
 }
 
 .main-container {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0.7em;
+    min-height: 100vh;
     margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Header Styles */
+/* Header Typography */
 .blog-title {
     font-family: 'Sacramento', cursive;
     font-size: 3.5em;
     color: rgb(216, 150, 7);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .section-title {
     color: rgb(60, 190, 160);
     text-transform: uppercase;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
-/* Profile Picture Styles */
+/* Profile Images */
 .profile-pic {
     width: 50px;
     height: 50px;
-    cursor: pointer;
     border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
 }
 
 /* Modal / Floating Box Styles */
-/* These are necessary because Bootstrap modals require different markup */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1050;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999; /* Ensures it sits on top of everything */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .floating-box {
-    width: 300px;
     background-color: #333;
     color: #fff;
     padding: 20px;
     border-radius: 8px;
+    width: 300px;
+    position: relative;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
@@ -64,10 +70,13 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
 }
 
 .box-header h3 {
     margin: 0;
+    font-size: 1.25em;
     color: #fff;
 }
 
@@ -76,6 +85,7 @@ body {
     border: none;
     color: #fff;
     font-size: 1.5em;
+    line-height: 1;
     cursor: pointer;
 }
 
@@ -83,9 +93,19 @@ body {
     background-color: #fff;
     color: #333;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    border-radius: 4px;
     cursor: pointer;
     margin-top: 15px;
     font-weight: bold;
-    border-radius: 4px;
+}
+
+.close-btn:hover {
+    background-color: #eee;
+}
+
+/* Footer */
+footer {
+    font-size: 0.85em;
+    color: #555;
 }
